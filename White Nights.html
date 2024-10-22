@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Nights - Fyodor Dostoevsky | CV of The Dreamer</title>
+    
+    <!-- Custom Font and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Complex CSS with 3D, Parallax, Animations -->
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #f8f9fa;
+        }
+
+        /* Parallax Scrolling Effect */
+        .parallax {
+            background: url('https://images.unsplash.com/photo-1523875194681-bedd468c58bf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDA1NTF8MHwxfGFsbHwxfHx8fHx8fHwxNjE2Njk0Mjkz&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+            height: 100vh;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: moveBg 20s infinite linear;
+        }
+
+        @keyframes moveBg {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 4rem;
+            transform: translateZ(50px);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            transform: translateZ(50px);
+            color: #ddd;
+        }
+
+        /* CV Section */
+        .cv-container {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 50px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .cv-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 20px;
+            width: 300px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+        }
+
+        .cv-card:hover {
+            transform: rotateY(15deg) rotateX(5deg);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.7);
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #ddd;
+        }
+
+        /* Floating Icons Animation */
+        .social-icons {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .social-icons i {
+            font-size: 2rem;
+            color: #1abc9c;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Scroll-triggered Animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Parallax Section -->
+    <section class="parallax">
+        <div class="overlay">
+            <h1>White Nights</h1>
+            <h2>By Fyodor Dostoevsky</h2>
+            <p>Credits: Arefina Tahrin, Tahsin Tarif, AR Rafi (Rabbi)</p>
+        </div>
+    </section>
+
+    <!-- CV Section -->
+    <section class="cv-container">
+        <div class="cv-card fade-up">
+            <h3>Personal Information</h3>
+            <p><strong>Name:</strong> Unnamed (The Dreamer)</p>
+            <p><strong>Age:</strong> 26</p>
+            <p><strong>Residence:</strong> St. Petersburg, Russia</p>
+        </div>
+
+        <div class="cv-card fade-up">
+            <h3>Work Experience</h3>
+            <p><strong>Title:</strong> Wanderer, Dreamer</p>
+            <p><strong>Responsibilities:</strong> Nightly walks, reflecting on unrequited love, observing life.</p>
+        </div>
+
+        <div class="cv-card fade-up">
+            <h3>Skills</h3>
+            <p>Philosophy & Reflection</p>
+            <p>Deep thinker, empathy for solitude</p>
+        </div>
+
+        <div class="cv-card fade-up">
+            <h3>Education</h3>
+            <p>Self-educated in literature, philosophy, and personal contemplation.</p>
+        </div>
+
+        <div class="cv-card fade-up">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> dreamer@whitenights.com</p>
+        </div>
+    </section>
+
+    <!-- Social Media Floating Icons -->
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 White Nights | Professional Web CV | Crafted with passion and creativity
+    </footer>
+
+    <!-- Complex JavaScript for Scroll Animations -->
+    <script>
+        const fadeUps = document.querySelectorAll('.fade-up');
+
+        window.addEventListener('scroll', () => {
+            const triggerBottom = window.innerHeight * 0.8;
+
+            fadeUps.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+
+                if(cardTop < triggerBottom) {
+                    card.classList.add('active');
+                } else {
+                    card.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
